@@ -1,0 +1,10 @@
+﻿@model TVM_baitaptulam01.Models.Song
+
+<h2>@Model.FileName</h2>
+<br />
+<table>
+    <tr>
+        <td><audio controls><source src="@Url.Content("~/Content/Songs/" + Model.FileName)" type="audio/mpeg"></audio></td>
+        <td><a href="@Url.Action("Download", "Minh", new { id = Model.Id })" class="">Tải về</a></td>
+    </tr>
+</table>
